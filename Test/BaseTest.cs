@@ -20,7 +20,7 @@ namespace DemoTests.Test
         [OneTimeSetUp]
         public static void OneTimeSetUp()
         {
-            driver = CustomDriver.GetChrome();
+            driver = CustomDriver.GetIncognitoChrome();
             checkboxPage = new CheckboxPage(driver);
             firstInputPage = new FirstInputPage(driver);
             selectDemoPage = new SelectDemoPage(driver);
@@ -41,7 +41,7 @@ namespace DemoTests.Test
         [OneTimeTearDown]
         public static void OneTimeTearDown()
         {
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }

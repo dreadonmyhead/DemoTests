@@ -49,9 +49,9 @@ namespace DemoTests.Drivers
         private static IWebDriver GetChromeWithIncognitoOption()
         {
             ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("incognito");
-            options.AddArgument("disable-infobars");
-            //options.AddArguments("incognito", "disable-infobars");
+            options.AddArgument("incognito");
+            options.AddExcludedArgument("enable-automation");
+            options.AddAdditionalCapability("useAutomationExtension", false);
             return new ChromeDriver(options);
         }
     }
