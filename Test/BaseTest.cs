@@ -12,6 +12,9 @@ namespace DemoTests.Test
         protected static CheckboxPage checkboxPage;
         protected static FirstInputPage firstInputPage;
         protected static SelectDemoPage selectDemoPage;
+        protected static SebPage sebPage;
+        protected static SenukaiPage senukaiPage;
+        protected static AlertPage alertPage;
         private static IWebDriver driver;
 
         [OneTimeSetUp]
@@ -21,6 +24,9 @@ namespace DemoTests.Test
             checkboxPage = new CheckboxPage(driver);
             firstInputPage = new FirstInputPage(driver);
             selectDemoPage = new SelectDemoPage(driver);
+            sebPage = new SebPage(driver);
+            senukaiPage = new SenukaiPage(driver);
+            alertPage = new AlertPage(driver);
         }
 
         [TearDown]
@@ -35,7 +41,7 @@ namespace DemoTests.Test
         [OneTimeTearDown]
         public static void OneTimeTearDown()
         {
-            driver.Quit();
+            //driver.Quit();
         }
     }
 }

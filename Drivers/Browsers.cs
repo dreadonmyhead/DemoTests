@@ -6,6 +6,7 @@
         Opera,
         Edge,
         InternetExplorer,
-        Firefox
+        Firefox,
+        IncognitoChrome
     }
 }
